@@ -15,12 +15,12 @@
 		<mkdir dir="build/jar" />
 		<jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
 			<manifest>
-				<attribute name="Main-Class" value="helloworld.HelloWorld"/>
+				<attribute name="Main-Class" value="carvalho.HelloWorld"/>
 			</manifest>
 		</jar>
 	</target>
 
-	<target name="run">
+	<target name="run" depends="jar">
 		<java jar="build/jar/HelloWorld.jar" fork="true" />
 	</target>
 
